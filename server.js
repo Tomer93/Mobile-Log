@@ -149,9 +149,6 @@ function logFilter(log, newData, filters, prop) {
     }
     return newData;
 }
-app.get('/', function(req, res) {
-    res.sendFile('index.html');
-});
 
 // app.listen(port);
 // app.use('/', express.static('index'));
