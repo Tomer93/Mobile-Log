@@ -11,5 +11,7 @@
     "fs": "latest",
     "http": "latest"
   },
-  "scripts": { "start" : "node logServer.js" } 
+  "scripts": { 
+    "start" : "node logServer.js" 
+  } 
 }
