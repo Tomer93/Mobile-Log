@@ -10,8 +10,5 @@
     "body-parser": "latest",
     "fs": "latest",
     "http": "latest"
-  },
-  "scripts": {
-    "start": "node server.js"
   }
 }
