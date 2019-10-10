@@ -9,10 +9,11 @@ var jsonData = [];
 var innerJsonData;
 var logSplit = [];
 
-app.post('/logsCreation', tableResponse);
 app.get('/', function(req, res) {
     res.send('hello bardaoosh')
 });
+
+app.post('/logsCreation', tableResponse);
 
 function tableResponse(req,res) {
     jsonData = [];
