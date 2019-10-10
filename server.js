@@ -12,8 +12,9 @@ app.use(express.static('public'))
 app.get('/', function(req, res) {
     res.send('hello bardaoosh')
 });
-
+app.use(allowCrossDomain);
 app.post('/logsCreation', tableResponse);
+app.listen(port, ()=>console.log('server started: ' + port));
 
 function tableResponse(req,res) {
     jsonData = [];
@@ -109,14 +110,6 @@ function jsonPush(logType, logContent) {
 
 
 
-app.listen(port, start);
-
-function start() {
-    console.log('server started: ' + port);
-}
-
-
-
 app.post('/getLogs', getLogs);
 
 function getLogs(req, res) {
@@ -150,6 +143,3 @@ function logFilter(log, newData, filters, prop) {
     }
     return newData;
 }
-
-// app.listen(port);
-// app.use('/', express.static('index'));

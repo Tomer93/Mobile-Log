@@ -1,0 +1,8 @@
+git add <filename>
+git add . (add all files)
+
+git commit -m "<commit message>" (prepare file changes for the push)
+
+git push (automatic push to master branch)
+
+git push origin <branchName>
