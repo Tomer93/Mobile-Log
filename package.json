@@ -12,6 +12,6 @@
     "http": "latest"
   },
   "scripts": { 
-    "start" : "node logServer.js" 
+    "start" : "node server.js" 
   } 
 }
