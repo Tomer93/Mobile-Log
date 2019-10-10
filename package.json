@@ -6,8 +6,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "latest",
     "body-parser": "latest",
+    "cors": "^2.8.5",
+    "express": "latest",
     "fs": "latest",
     "http": "latest"
   }
