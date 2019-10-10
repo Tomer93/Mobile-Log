@@ -8,7 +8,7 @@ var port = process.env.PORT || 5050;
 var jsonData = [];
 var innerJsonData;
 var logSplit = [];
-
+app.use(express.static('public'))
 app.get('/', function(req, res) {
     res.send('hello bardaoosh')
 });
