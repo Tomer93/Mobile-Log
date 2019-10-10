@@ -4,7 +4,7 @@ var fs = require('fs');
 var app = express();
 app.use(express.json());
 app.use(express.text());
-var port = 80;
+var port = 5050;
 var jsonData = [];
 var innerJsonData;
 var logSplit = [];
