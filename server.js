@@ -10,6 +10,9 @@ var innerJsonData;
 var logSplit = [];
 
 app.post('/logsCreation', tableResponse);
+app.get('/', function(req, res) {
+    res.send('hello bardaoosh')
+});
 
 function tableResponse(req,res) {
     jsonData = [];
@@ -146,5 +149,9 @@ function logFilter(log, newData, filters, prop) {
     }
     return newData;
 }
+app.get('/', function(req, res) {
+    res.sendFile('index.html');
+});
 
-app.use('/table', express.static('table'));
+// app.listen(port);
+// app.use('/', express.static('index'));
