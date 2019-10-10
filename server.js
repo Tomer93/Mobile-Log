@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.get('/', function(req, res) {
     res.send('hello bardaoosh')
 });
-app.use(allowCrossDomain);
+var cors = require('cors'); app.use(cors());
 app.post('/logsCreation', tableResponse);
 app.listen(port, ()=>console.log('server started: ' + port));
 
