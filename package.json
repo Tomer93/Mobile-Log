@@ -2,7 +2,7 @@
   "name": "logs",
   "version": "1.0.0",
   "description": "",
-  "main": "logServer.js",
+  "main": "server.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -11,7 +11,7 @@
     "fs": "latest",
     "http": "latest"
   },
-  "scripts": { 
-    "start" : "node server.js" 
-  } 
+  "scripts": {
+    "start": "node server.js"
+  }
 }
