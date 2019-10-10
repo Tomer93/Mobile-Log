@@ -1,0 +1,14 @@
+{
+  "name": "logs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "logServer.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "latest",
+    "body-parser": "latest",
+    "fs": "latest",
+    "http": "latest"
+  }
+}
