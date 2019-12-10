@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  $('#manualLogsBtn').click(function(){$('#manualLogsOverlay').css('display','block')});
 //On load trigger
   //tableCallbackAndCreation  ()
 //<--------------------------------------------------------------------------------INPUT--------------------------------------------------------------------------->
@@ -23,7 +23,8 @@ function tableCallbackAndCreation  () {
 
 }
   $('#logsSubmit').click(function (){
-    let logsval = $("#allLogs").val();
+    $('#manualLogsOverlay').css('display','none')
+    var logsval = $("#allLogs").val();
     logsval.replace("\n","$")
     console.log("LOG LEVEL"+logsval);
         $.ajax({
@@ -32,7 +33,7 @@ function tableCallbackAndCreation  () {
           contentType: 'text/plain',
           data: {logsval}
         }).done(function(response){
-          console.log('success');
+          console.log('success'+JSON.stringify(response));
           TableCreation(response);
         }).fail(function(jqXHR, textStatus, errorThrown){
           console.log('FAILED! ERROR: ' + errorThrown);
@@ -54,14 +55,18 @@ function TableCreation(logsJson){
         $('#logsbody').append("<tr id="+counter+"><td>"+logTime+"</td><td>"+logType+"</td><td>"+logData+"</td></tr>");
         switch (logType){
             case 'Recommendation':
-                $("#"+counter+"> td:nth-child(2)").addClass("log1");
+                $("#"+counter+"> td:nth-child(2)").addClass("rec");
                 break;
             case 'Evaluator':
                 $("#"+counter+"> td:nth-child(2)").addClass("logError");
                 break;
             case 'Smart Variable':
-                 $("#"+counter+"> td:nth-child(2)").addClass("log2");
+                 $("#"+counter+"> td:nth-child(2)").addClass("logvar");
                 break;
+            case 'Smart Variable':
+                 $("#"+counter+"> td:nth-child(2)").addClass("event");
+                break;
+            
 
         }
         counter++;
@@ -284,6 +289,6 @@ $("#select").selectionator({
 
 });
 
-
+//Exposing the text box for manual logs insertion
 
   

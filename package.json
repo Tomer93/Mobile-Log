@@ -2,16 +2,16 @@
   "name": "logs",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "logServer.js",
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "start" : "nodemon logServer.js "
+  },
   "dependencies": {
     "express": "latest",
     "body-parser": "latest",
     "fs": "latest",
     "http": "latest"
-  },
-  "scripts": {
-    "start": "node server.js"
   }
 }

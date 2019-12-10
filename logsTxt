@@ -7,7 +7,8 @@ Aug 19 18:37:36 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper
 )
 Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> setEvaluator called with "9224" and params:(
     "en_SG"
-)Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> pageView called with: Home View, context: <DYPageContext: 0x282b3b880>
+)
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> pageView called with: Home View, context: <DYPageContext: 0x282b3b880>
 Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> message MSG_INIT returned from server, with error: false
 Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> Audiences returned:(
     660004,

@@ -16,9 +16,11 @@
     <div class="container">
         <h2>SDK Logs</h2>
         <label>
-            <div style="margin-top: 20px; margin-bottom: 22px;">input logs here:</div>
+            <div id="manualLogsOverlay">
             <textarea id="allLogs" rows="10" cols="200">  </textarea> 
             <button id="logsSubmit" class="btn btn-primary">Submit</button>
+        </div>
+        <button id="manualLogsBtn" class="btn btn-primary">Insert Logs List Manually</button>
         </label>
         <!--dropdown menu-->
         <div id="select" ng-model=""></div>
