@@ -300,7 +300,7 @@ $("#select").selectionator({
 var iFrame = document.getElementById("uploader_iframe");
 iFrame.onload = function () {
   /** do smth with your iframe data */
-  console.log("data is"+ iFrame.contentDocument.body.innerText);
+  console.log("data is: "+ iFrame.contentDocument.body.innerText);
   TableCreation(JSON.parse(iFrame.contentDocument.body.innerText));
 
 };
