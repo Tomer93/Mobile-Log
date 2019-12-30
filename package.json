@@ -6,12 +6,16 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start" : "nodemon logServer.js "
+    "start": "nodemon logServer.js "
   },
   "dependencies": {
-    "express": "latest",
     "body-parser": "latest",
+    "express": "latest",
+    "express-fileupload": "^1.1.6",
+    "file-system": "^2.2.2",
+    "formidable": "^1.2.1",
     "fs": "latest",
-    "http": "latest"
+    "http": "latest",
+    "multer": "^1.4.2"
   }
 }

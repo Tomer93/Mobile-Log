@@ -9,7 +9,8 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
-    <script src="table.js"></script>
+    <script src="https://kit.fontawesome.com/ba9c9696e9.js" crossorigin="anonymous"></script>
+        <script src="table.js"></script>
 
 </head>
 <body>
@@ -17,10 +18,19 @@
         <h2>SDK Logs</h2>
         <label>
             <div id="manualLogsOverlay">
-            <textarea id="allLogs" rows="10" cols="200">  </textarea> 
+                    <i class="fas fa-times" id="exitLogs"></i>
+
+                    <textarea id="allLogs" rows="10" cols="200">  </textarea> 
             <button id="logsSubmit" class="btn btn-primary">Submit</button>
         </div>
         <button id="manualLogsBtn" class="btn btn-primary">Insert Logs List Manually</button>
+        <form method="post" action="/" enctype="multipart/form-data" id="fileuploadForm" target="uploader_iframe">
+            <input type="file" name="filename">
+            <input type="submit" value="Upload">
+        </form>
+        <iframe id="uploader_iframe" name="uploader_iframe" style="width:300px;height:40px;" frameBorder="0"><script type="text/javascript"> 
+            </script></iframe>
+
         </label>
         <!--dropdown menu-->
         <div id="select" ng-model=""></div>

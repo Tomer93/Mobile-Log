@@ -1,0 +1,47 @@
+Aug 19 18:37:35 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger: <E> (thrd main) (DYJsHandler.processScripts:) - Done evaluating JS code! Script Version:12354 - TimeTook:0.312948 DYTime:0.378304
+Aug 19 18:37:36 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> Timings: experimentsReadyWithState:1, Called from:DYDelegateHandler.onDelegateSet:, DYTime:1.264856
+Aug 19 18:37:36 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> OnInitStateChanged:0 - DYTime:1.267802
+Aug 19 18:37:36 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> sending message to server: MSG_INIT
+Aug 19 18:37:36 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> setEvaluator called with "9789" and params:(
+    0
+)
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> setEvaluator called with "9224" and params:(
+    "en_SG"
+)
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> pageView called with: Home View, context: <DYPageContext: 0x282b3b880>
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> message MSG_INIT returned from server, with error: false
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> Audiences returned:(
+    660004,
+    775104,
+    814858
+)
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> sending message to server: MSG_CUSTOM_EVENT
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> message MSG_CUSTOM_EVENT returned from server, with error: false
+Aug 19 18:37:37 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> OnInitStateChanged:4 - DYTime:2.577261
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> Timings: experimentsReadyWithState:3, Called from:DYDelegateHandler.experimentsReadyWithState:, DYTime:2.852243
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> setEvaluator called with "9224" and params:(
+    "en_SG"
+)
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> setEvaluator called with "9789" and params:(
+    0
+)
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> trackEvent called with: DyReady and props: {
+}
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> pageView called with: Dummy Screen, context: <DYPageContext: 0x282b88580>
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> getSmartVariable called with "Recommendation Widget Id", result: 51061, defaultValue: null
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> sending message to server: MSG_CUSTOM_EVENT
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> getSmartVariable called with "Recommendation Widget Title", result: Recommended for You, defaultValue: Just For You
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> getSmartVariable called with "Recommendation Widget Layout", result: Cart Layout A, defaultValue: Cart Layout A
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> sendRecommendationRequest called with widget: "51061" context: {
+    data =     (
+    );
+    lng = "en_SG";
+    type = HOMEPAGE;
+}
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> getSmartVariable called with "Pair It With ID (Product Page)", result: bought_together, defaultValue: pair_it_with
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> getSmartVariable called with "Pair It With Widget Title (Product Page)", result: Pair It With, defaultValue: Pair It With
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> getSmartVariable called with "Pair It With Call Type (Product Page)", result: API, defaultValue: API
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> message MSG_CUSTOM_EVENT returned from server, with error: false
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> sending message to server: MSG_LOG_VARIATION
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> sending message to server: (null)
+Aug 19 18:37:38 DYs-iPhone Sephora(DYSDK)[241] <Notice>: DYLogger:  <DYDeveloper> sending message to server: MSG_RCOM_SERVER

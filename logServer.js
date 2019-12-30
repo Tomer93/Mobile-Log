@@ -1,13 +1,56 @@
 var express = require('express');
+//var formidable = require('formidable');
 var app = express();
+var multer = require('multer');
+var upload = require ('express-fileupload');
+app.use(upload());
 app.use(express.json());
 app.use(express.text());
+var fs = require('fs');
 var port = 80;
+//var http  = require("http").Server(app).listen(80);
 var jsonData = [];
 var innerJsonData;
 var logSplit = [];
 var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 var currentMonth;
+app.get("/",function(req,res){
+res.sendFile(__dirname+"table.html");
+
+})
+let data; // the raw logs data
+let firstChars; //First charts to spit the logs
+
+app.post("/",function(req,res){
+    if(req.files){
+        console.log("filename " + JSON.stringify (req.files.filename.name));
+    var theFile = req.files.filename,
+    filename = JSON.stringify(req.files.filename.name).replace(/['"]+/g, '');    ;
+    theFile.mv("./uploadfiles/"+filename,function(err){
+     if(err){
+console.log(err)
+res.send("error occoured");
+
+    }
+    else{
+        //res.send('File was uploaded sucessfuly');
+        fs.readFile('logsTxt', 'utf8', function(err, fileData) {
+            if (err) throw err;
+            data = unescape(fileData).replace(/\+/g, " ");
+            firstChars = fileData.substring(0, 20);
+            tableResponse(req,res);
+        });
+        
+    }
+
+
+    })
+
+    
+
+    }
+    
+    })
 
 app.post('/logsCreation', tableResponse);
 
@@ -21,10 +64,14 @@ function getIndexRow(data) {
 }
 
 function tableResponse(req, res) {
+    //console.log(data);
     jsonData = [];
     logSplit = [];
-    let data = unescape(req.body).replace(/\+/g, " ");
-    let firstChars = req.body.substring(0, 20)
+    if (!data){ //means the no file was uploaded (otherwise 'data' was true)
+        data = unescape(req.body).replace(/\+/g, " ");
+        firstChars = req.body.substring(0, 20)
+
+    }
     for (i = 0; i < month.length; i++) {
         firstChars.toLowerCase().indexOf(month[i].toLowerCase()) != -1 ? currentMonth = month[i] : false
     }
@@ -34,7 +81,6 @@ function tableResponse(req, res) {
     for (var word of data[rowIndex].split(" ")) {
         indexes.push(word)
     }
-    console.log('indexes'+indexes)
     var logType1 = (indexes.indexOf('DYLogger:') + 3).toString();
     var logMessage1 = (indexes.indexOf('DYLogger:') + 4).toString();
     var HHMMSSregex =new RegExp ('([0-1]?[0-9]|[2][0-3]):([0-5][0-9])(:[0-5][0-9])');
@@ -45,11 +91,6 @@ function tableResponse(req, res) {
             break;
         }
         };
-        
-    
-    //var logTime1 = indexes.findIndex(HHMMSSregex => /^sortOrder=/.test(HHMMSSregex));
-    
-    //console.log('index of TS '+logTime1);
 
     for (var singleLog in data) {
         logSplit.push(data[singleLog].split(" "));
@@ -103,7 +144,6 @@ function tableResponse(req, res) {
 
     }
     res.send(jsonData);
-
 }
 function jsonPush(logType, logContent) {
     if (!innerJsonData) {

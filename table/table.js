@@ -1,7 +1,10 @@
 $(document).ready(function(){
   $('#manualLogsBtn').click(function(){$('#manualLogsOverlay').css('display','block')});
+  $('#exitLogs').click(function(){$('#manualLogsOverlay').css('display','none')})
+  //$("#allLogs").unbind();
 //On load trigger
   //tableCallbackAndCreation  ()
+
 //<--------------------------------------------------------------------------------INPUT--------------------------------------------------------------------------->
 
 var filterType=[],logTime,logData,logType,counter=1;
@@ -137,20 +140,20 @@ Plugin.prototype = {
     var header = document.createElement("div");
     var search = document.createElement("span");
     var overlay = document.createElement("span");
-    overlay.className = "overlay";
+     overlay.className = "overlay";
     var shadow = document.createElement("span");
     shadow.className = "shadow";
     var placeholder = document.createTextNode("Choose Log filters");
     search.className = "search";
-    search.appendChild(shadow);
-    search.appendChild(overlay);
-    search.appendChild(placeholder);
-    popup.appendChild(search);
+    // search.appendChild(shadow);
+    // search.appendChild(overlay);
+    //search.appendChild(placeholder);
+    //popup.appendChild(search);
     var menu = document.createElement("ul");
     select.style.display = "none";
     menu.className = "list";
     var box = document.createElement("div");
-    box.className = "menu";
+    box.className = "";
     box.appendChild(menu);
     popup.appendChild(box);
     console.log("optgroup", options.optgroups);
@@ -261,7 +264,7 @@ $("#select").selectionator({
   data: {
     optgroups: [
       {
-        label: "Type",
+        label: "Select Logs Type:",
         options: [
           {
             value: "Recommendation",
@@ -281,11 +284,26 @@ $("#select").selectionator({
             defaultSelected: false,
             selected: false
           },
+          {
+            value: "Event",
+            text: "Event",
+            defaultSelected: false,
+            selected: false
+          },
         ]
       },
     ]
   }
 });
+
+// This funsction gets the data from the Iframe after returning data from submitting a file
+var iFrame = document.getElementById("uploader_iframe");
+iFrame.onload = function () {
+  /** do smth with your iframe data */
+  console.log("data is"+ iFrame.contentDocument.body.innerText);
+  TableCreation(JSON.parse(iFrame.contentDocument.body.innerText));
+
+};
 
 });
 
