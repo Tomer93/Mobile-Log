@@ -5,6 +5,10 @@ $(document).ready(function(){
 //On load trigger
   //tableCallbackAndCreation  ()
 
+//<--------------------------------------------------------------------------------File uploading--------------------------------------------------------------------------->
+$('#fileUploadBtn').click(function(){$('#logsFileHolder').click()});
+$('#logsFileHolder').change(function(){$('form#fileuploadForm').submit();});
+
 //<--------------------------------------------------------------------------------INPUT--------------------------------------------------------------------------->
 
 var filterType=[],logTime,logData,logType,counter=1;
@@ -44,6 +48,8 @@ function tableCallbackAndCreation  () {
   }
 
   );
+
+
 
 
 //<--------------------------------------------------------------------------------This function creats the table according to the log file input--------------------------------------------------------------------------->

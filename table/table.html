@@ -25,10 +25,10 @@
         </div>
         <button id="manualLogsBtn" class="btn btn-primary">Insert Logs List Manually</button>
         <form method="post" action="/" enctype="multipart/form-data" id="fileuploadForm" target="uploader_iframe">
-            <input type="file" name="filename">
-            <input type="submit" value="Upload">
+            <input style="display: none;" id="logsFileHolder" type="file" name="filename">
         </form>
-        <iframe id="uploader_iframe" name="uploader_iframe" style="width:300px;height:40px;" frameBorder="0"><script type="text/javascript"> 
+        <button id="fileUploadBtn" class="btn btn-primary">Upload a file</button>
+        <iframe id="uploader_iframe" name="uploader_iframe" style="display:none;" frameBorder="0"><script type="text/javascript"> 
             </script></iframe>
 
         </label>

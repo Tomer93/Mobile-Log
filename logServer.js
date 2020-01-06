@@ -57,7 +57,8 @@ app.post('/logsCreation', tableResponse);
 function getIndexRow(data) {
     for (let index = 0; index < data.length; index++) {
         if (data[index].indexOf('DYLogger:') + 11 == data[index].indexOf('<DYDeveloper>')) {
-
+            
+            console.log('index is '+ index);
             return index
         }
     }
@@ -70,6 +71,8 @@ function tableResponse(req, res) {
     if (!data){ //means the no file was uploaded (otherwise 'data' was true)
         data = unescape(req.body).replace(/\+/g, " ");
         firstChars = req.body.substring(0, 20)
+        //console.log('data is: '+ data)
+        //console.log('<--------------------------------HERE----------------------------------->')
 
     }
     for (i = 0; i < month.length; i++) {
@@ -78,6 +81,7 @@ function tableResponse(req, res) {
     data = data.toString().split("\n" + currentMonth)
     var indexes = []
     var rowIndex = getIndexRow(data);
+    console.log('rowIndex is: '+ rowIndex)
     for (var word of data[rowIndex].split(" ")) {
         indexes.push(word)
     }
@@ -143,6 +147,7 @@ function tableResponse(req, res) {
         }
 
     }
+    data = "";
     res.send(jsonData);
 }
 function jsonPush(logType, logContent) {
